@@ -42,14 +42,44 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
-  /* animation: cookie-spin 10s linear infinite; */
+  width: fit-content;
+  height: fit-content;
 }
-/* @keyframes cookie-spin {
+@keyframes cookie-spin {
   100% {
     transform: rotate(360deg);
   }
 }
- */
+.cookie-spin-10 {
+  animation: cookie-spin 10s linear infinite;
+}
+.cookie-spin-9 {
+  animation: cookie-spin 9s linear infinite;
+}
+.cookie-spin-8 {
+  animation: cookie-spin 8s linear infinite;
+}
+.cookie-spin-7 {
+  animation: cookie-spin 7s linear infinite;
+}
+.cookie-spin-6 {
+  animation: cookie-spin 6s linear infinite;
+}
+.cookie-spin-5 {
+  animation: cookie-spin 5s linear infinite;
+}
+.cookie-spin-4 {
+  animation: cookie-spin 4s linear infinite;
+}
+.cookie-spin-3 {
+  animation: cookie-spin 3s linear infinite;
+}
+.cookie-spin-2 {
+  animation: cookie-spin 2s linear infinite;
+}
+.cookie-spin-1 {
+  animation: cookie-spin 1s linear infinite;
+}
 
 .cookie-pc-message {
   display: none;

@@ -3,8 +3,12 @@ class CookieClickerGame {
     this.score = 0;
     this.scoreDisplay = document.querySelector(".score-counter");
     this.cookie = document.querySelector(".cookie");
+    this.cookieImg = document.querySelector("img");
     this.cookieCount = 0;
     this.cookieCounterMax = 100;
+    this.rotationSpeed = 0;
+    this.rotationIncrement = 360;
+
     this.cookie.addEventListener("click", this.clickCookie.bind(this));
     setInterval(() => {
       if (this.cookieCount > 0) {
@@ -16,6 +20,7 @@ class CookieClickerGame {
       if (this.cookieCount > 80) {
         this.cookieCount = this.cookieCount - 1;
       }
+      this.updateCookieSpin();
     }, 600);
   }
 
@@ -23,24 +28,17 @@ class CookieClickerGame {
     if (this.cookieCount < this.cookieCounterMax) {
       this.cookieCount++;
       this.score = this.score + this.cookieCount;
+
+      this.rotationSpeed += this.rotationIncrement;
     } else {
       this.score = this.score + this.cookieCounterMax;
     }
     this.updateScoreDisplay();
-    this.updateCookieSpin();
   }
 
   updateCookieSpin() {
-    this.cookie.style.animation = `cookie-spin 4s infinite`;
-
-    /* setTimeout(() => {
-      this.cookie.style.transition = "";
-    }, this.cookieRotationSpeed);
-
-    this.cookie.style.transform = "rotate(360deg)";
-    setTimeout(() => {
-      this.cookie.style.transform = "rotate(0deg)";
-    }, 0); */
+    this.cookieImg.style.transition = `transform 50s linear`;
+    this.cookieImg.style.transform = `rotate(${this.rotationSpeed}deg)`;
   }
 
   updateScoreDisplay() {
