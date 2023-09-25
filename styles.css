@@ -9,6 +9,8 @@
 *::marker {
   content: none;
 }
+
+
 html {
   scroll-behavior: smooth;
 }
@@ -39,4 +41,26 @@ section {
 section div.cookie-container {
   width: 400px;
   height: 400px;
+}
+
+.cookie-pc-message{
+  display: none;
+}
+
+@media screen and (min-width:500px) {
+  .cookie-pc-message{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 1rem;
+    height: 100vh;
+    background-color: rgb(190, 190, 190);
+  }
+  .cookie-container{
+    display: none;
+  }
+  header {
+    display: none;
+  }
 }
