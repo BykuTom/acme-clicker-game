@@ -99,10 +99,20 @@ main {
     height: 100vh;
     background-color: rgb(190, 190, 190);
   }
-  .cookie-container {
+  .cookie {
     display: none;
   }
   header {
     display: none;
   }
+}
+
+.achievementsSection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.achievement{
+  text-align: center;
 }

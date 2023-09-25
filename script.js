@@ -4,6 +4,7 @@ class CookieClickerGame {
     this.scoreDisplay = document.querySelector(".score-counter");
     this.cookie = document.querySelector(".cookie");
     this.cookieImg = document.querySelector("img");
+    this.achievement = document.querySelector("achievementsSection")
     this.cookieCount = 0;
     this.cookieCounterMax = 100;
     this.rotationSpeed = 0;
@@ -39,6 +40,7 @@ class CookieClickerGame {
     }
     this.rotationSpeed += this.rotationIncrement;
     this.updateScoreDisplay();
+    this.achievements();
   }
 
   updateCookieSpin() {
@@ -48,6 +50,13 @@ class CookieClickerGame {
 
   updateScoreDisplay() {
     this.scoreDisplay.textContent = `Score: ${this.score}`;
+  }
+  
+  achievements() {
+    if (this.cookieCount === 5 ) {
+      console.log("you got 5")
+      this.achievement.innerHTML = "<div class = achievement><h2>You got 5 cookies</div></h2>"
+    }
   }
 }
 
