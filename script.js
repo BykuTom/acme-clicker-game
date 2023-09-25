@@ -13,12 +13,15 @@ class CookieClickerGame {
     setInterval(() => {
       if (this.cookieCount > 0) {
         this.cookieCount = this.cookieCount - 1;
+        this.rotationSpeed -= this.rotationIncrement;
       }
       if (this.cookieCount > 50) {
         this.cookieCount = this.cookieCount - 1;
+        this.rotationSpeed -= this.rotationIncrement * 2;
       }
       if (this.cookieCount > 80) {
         this.cookieCount = this.cookieCount - 1;
+        this.rotationSpeed -= this.rotationIncrement * 3;
       }
       this.updateCookieSpin();
     }, 600);
@@ -28,11 +31,10 @@ class CookieClickerGame {
     if (this.cookieCount < this.cookieCounterMax) {
       this.cookieCount++;
       this.score = this.score + this.cookieCount;
-
-      this.rotationSpeed += this.rotationIncrement;
     } else {
       this.score = this.score + this.cookieCounterMax;
     }
+    this.rotationSpeed += this.rotationIncrement;
     this.updateScoreDisplay();
   }
 
