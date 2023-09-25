@@ -1,0 +1,32 @@
+/*General styles*/
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+*::marker {
+  content: none;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  background-color: #333;
+  font-size: 16px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-weight: 300;
+}
+body strong {
+  font-weight: 700;
+}
+body h1 {
+  font-size: xx-large;
+}
+body h2 {
+  font-size: x-large;
+}
+body p {
+  font-size: large;
+}
