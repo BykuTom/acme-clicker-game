@@ -30,3 +30,13 @@ body h2 {
 body p {
   font-size: large;
 }
+
+section {
+  position: relative;
+  min-height: 100vh;
+  background: #444;
+}
+section div.cookie-container {
+  width: 400px;
+  height: 400px;
+}
