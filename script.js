@@ -23,6 +23,9 @@ class CookieClickerGame {
         this.cookieCount = this.cookieCount - 1;
         this.rotationSpeed -= this.rotationIncrement * 3;
       }
+      if (this.rotationSpeed < 0) {
+        this.rotationSpeed = 0;
+      }
       this.updateCookieSpin();
     }, 600);
   }
